@@ -10,21 +10,30 @@
     	<div class="form-group">
     		<input type="file" accept="text/*" file-model="fileModel">
     	</div>
-    	<button type="submit" class="btn btn-default" ng-click="read()">procesar</button>
+    	<button type="button" class="btn btn-default" ng-click="read()">leer<small><br />(dar 2 clicks)</small></button>
+    	<button type="button" class="btn btn-default" ng-click="process(data.read)">procesar<small><br />(después de leer)</small></button>
     </form>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
   	<h3>Data original</h3>
-    <div style="width: 100%;border: 1px dashed lightgray;">
-    	<textarea style="width:100%" class="form-control" disabled="true" rows="25" ng-model="data.raw"></textarea>
+    <div>
+    	<pre>{{data.raw}}</pre>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  	<h3>Data leída</h3>
+    <div>
+    	<pre>{{data.read | json:4}}</pre>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
   	<h3>Data procesada</h3>
-    <pre>{{data.processed}}</pre>
+    <pre>{{data.processed | json:4}}</pre>
   </div>
 </div>
