@@ -1,2 +1,2 @@
 # expertio
-Expert system: rules reader, processor, awesome chit
+Expert system: rules reader, processor, awesome stuff
